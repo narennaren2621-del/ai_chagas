@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  firebase_core: ^3.12.0
+  firebase_auth: ^5.5.1
+  cloud_firestore: ^5.6.5
   google_sign_in: ^7.2.0
   google_sign_in_web: ^1.1.3
   image_picker: ^0.8.8+7
@@ -26,4 +29,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/data/signals_features.csv
-    # - assets/models/chagas_model.tflite  # Add this after converting the model
+    - assets/models/chagas_lstm.tflite
+    - assets/models/model_info.json
+    - assets/models/feature_names.txt

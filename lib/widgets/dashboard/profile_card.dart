@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../models/user_profile.dart';
-import '../../pages/profile_page.dart';
+import 'package:chagas_predictor/models/user_profile.dart';
+import 'package:chagas_predictor/pages/profile/profile_page.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({

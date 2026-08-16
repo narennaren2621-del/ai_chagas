@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:chagas_predictor/firebase_options.dart';
+import 'package:chagas_predictor/config/app_theme.dart';
+import 'package:chagas_predictor/pages/auth/auth_page.dart';
 
-import 'config/app_theme.dart';
-import 'pages/auth_page.dart';
-
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch (e) {
+    debugPrint('Firebase init notice: $e');
+  }
   runApp(const ChagasPredictorApp());
 }
 
